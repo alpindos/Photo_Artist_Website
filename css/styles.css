@@ -12,26 +12,29 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 .bgimg-1 {
   background-image: url(../images/ailbhe-flynn-jkZs3Oi9pq0-unsplash.jpg);
-  min-height: 100%;
+  /*min-height: 500px;*/
+  height: 100%;
 }
 
 .bgimg-2 {
   background-image: url(../images/evgeni-tcherkasski-JHHJHikb9AM-unsplash.jpg);
-  min-height: 400px;
+  /*min-height: 500px;*/
+  height: 100%;
 }
 
 .bgimg-3 {
   background-image: url(../images/mario-ho-vV2A5OHUqsU-unsplash.jpg);
-  min-height: 400px;
+  /*min-height: 500px;*/
+  height: 100%;
 }
 
 .bgimg-4 {
   background-image: url(../images/katrin-hauf-l5NYUg6bkFA-unsplash.jpg);
-  min-height: 400px;
+  /*min-height: 500px;*/
+  height: 100%;
 }
 
 .caption-title {
@@ -50,12 +53,10 @@ body, html {
   font-size: 25px;
   letter-spacing: 10px;
 }
-
-h3 {
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
-  color: #111;
+.caption-title a {
+  text-decoration: none;
+  color: #fff;
+  padding: 18px;
 }
 
 /* Turn off parallax scrolling for tablets and phones */
