@@ -76,7 +76,7 @@ body, html {
   margin:auto;
 }
 .intro {
-  font-family: 'arial';
+  font-family: 'Karla', sans-serif;
 }
 .row {
   margin: 10px -16px;
@@ -94,11 +94,26 @@ body, html {
   width:33.33%;
   /*display: none; /*hide all elements by default*/
 }
-/*clear floats after rows*/
+/*clear floats after rows */
 .row:after {
   content:"";
   display: table;
   clear: both;
+} 
+.filter-option {
+	background-color: #93ACB5;
+	border: none;
+	color: #211A1E;
+	padding: 16px 32px;
+	margin: 0 12px 0  0;
+	text-align: center;
+	text-decoration: ;
+	display: inline-block;
+	font-size: 16px;
+}
+.active, .filter-option:hover {
+	background-color: #6C756B;
+	color: white;
 }
 .hidden {
   display: none;
