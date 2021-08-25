@@ -17,9 +17,8 @@
     <link rel="stylesheet" href="css/styles2.css">
   </head>
   <body>
-    <div class="main">
       <div class="intro">
-        <h2>A Glimpse from My Portfolio</h2>
+        <h2>A Glimpse from My Works</h2>
         <p>These are some selected works from my portfolio. I catch the perfect moment sometimes
            when walking down the streets, sometimes when I enjoy fresh air away from the crowd, and sometimes
            in the middle of an action.</p>
@@ -54,7 +53,7 @@
             <img src="images/action/yoav-aziz-vnrnW01ddbc-unsplash.jpg" onclick="openLightbox();toSlide(9)" class="hover-shadow preview" alt="running women">
         </div>
       </div>
-<!-- Lightbox -->	  
+<!-- Lightbox -->
 	  <div id="Lightbox" class="modal">
 		<span class="close pointer" onclick="closeLightbox()">&times;</span>
 		<div class="modal-content">
@@ -102,11 +101,11 @@
 				<img src="images/action/yoav-aziz-vnrnW01ddbc-unsplash.jpg" class="image-slide" alt="running women">
 				<h4>Shadows</h4>
 				<p>The best time to run along the seaside</p>
-			</div>	
-			
+			</div>
+
 			<a class="previous" onclick="changeSlide(-1)">&#10094;</a>
 			<a class="next" onclick="changeSlide(1)">&#10095;</a>
-			
+
 			<div class="dots">
 			    <div class="col">
 				<img src="images/urban/bmx22c-uVyBdRcrz94-unsplash.jpg" class="modal-preview hover-shadow" onclick="toSlide(1)" alt="train station">
@@ -135,35 +134,54 @@
 				<div class="col">
 					<img src="images/action/yoav-aziz-vnrnW01ddbc-unsplash.jpg" class="modal-preview hover-shadow" onclick="toSlide(9)" alt="running women">
 				</div>
-			</div>			  
+			</div>
 		</div>
-	</div>
 	</div>
     <!--    <script src="portfolioScript.js"></script> -->
 		<script>
-			function filterSelection(e) {
-			const themes = document.querySelectorAll(".row div");
-			let filter = e.target.dataset.filter;
-			if (filter === 'all') {
-				themes.forEach(theme => theme.classList.remove('hidden'));
-			} else {
-				themes.forEach(theme => {
-				theme.classList.contains(filter) ?
-				theme.classList.remove('hidden') :
-				theme.classList.add('hidden');
-				});
-			};
-			};			
-			// Highlighting selected button
-			var container = document.getElementById("filters");
-			var btns = container.getElementsByClassName("filter-option");
-			for (var i = 0; i < btns.length; i++) {
-			btns[i].addEventListener("click", function() {
-			var current = document.getElementsByClassName("active");
-			current[0].className = current[0].className.replace(" active", " ");
-			this.className += " active";
-			});
-			};
+// Initializes here and showSlide() is run to give the lightbox a default state
+      let slideIndex = 1;
+      showSlide(slideIndex);
+
+      // Providing the functionality for clickable contents
+      // previews, dots, controls and the close button
+      function openLightbox() {
+        document.getElementById('Lightbox').style.display = 'block';
+      };
+      function closeLightbox() {
+        document.getElementById('Lightbox').style.display = 'none';
+      };
+      // Assigning new values to slideIndex
+      function changeSlide(n) {
+        showSlide(slideIndex +=n);
+      };
+      function toSlide(n) {
+        showSlide(slideIndex = n);
+      };
+      // Logic for the Lightbox: It will decide which slide to show
+      // and which dot is active
+      function showSlide(n) {
+        const slides = document.getElementsByClassName('slide');
+        let modalPreviews = document.getElementsByClassName('modal-preview');
+
+        if (n > slides.length) {
+          slideIndex = 1;
+        };
+
+        if (n < 1) {
+          slideIndex = slides.length;
+        };
+
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        };
+
+        for (let i = 0; i < modalPreviews.length; i++) {
+          modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
+        };
+        slides[slideIndex - 1].style.display = 'block';
+        modalPreviews[slideIndex - 1].className += ' active';
+      };
 		</script>
       </body>
       </html>

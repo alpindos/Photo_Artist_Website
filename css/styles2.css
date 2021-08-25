@@ -15,6 +15,7 @@ body {
 .row {
 	display: flex;
 	flex-direction: row;
+  flex-wrap: wrap;
 	justify-content: space-between;
 }
 .row > .col {
@@ -22,7 +23,8 @@ body {
 }
 .col {
 	float: left;
-	width: 25%;
+	width: 33.333%;
+  padding: 10px;
 }
 
 /* Lightbox Styles */
@@ -70,8 +72,8 @@ img.preview, img.modal-preview {
 	opacity: 0.6;
 }
 img.active,
-preview:hover,
-,modal-preview:hover {
+.preview:hover,
+.modal-preview:hover {
 	opacity: 1;
 }
 img.hover-shadow {
@@ -119,24 +121,7 @@ img.hover-shadow {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .intro {
   font-family: 'Karla', sans-serif;
+  padding: 10px;
 }
