@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<title>My Portfolio</title>
+	<link rel="shortcut icon" type="image/jpg" href="images/Marlena-Ghelina-Icon.ico">
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Allison&
+													  family=Architects+Daughter&
+													  family=Lobster&
+													  family=Shadows+Into+Light&
+													  family=Karla&display=swap"
+													  rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <div class="main">
       <div class="intro">
-        <h2>My Portfolio</h2>
-        <p>These are some selected works from my porfolio. I catch the perfect moment sometimes
+        <h2>A Glimpse from My Portfolio</h2>
+        <p>These are some selected works from my portfolio. I catch the perfect moment sometimes
            when walking down the streets, sometimes when I enjoy fresh air away from the crowd, and sometimes
            in the middle of an action.</p>
       </div>
-      <div class="filters">
-        <button class="filter-option" data-filter="all" 	onclick="filterSelection(event)">Show All</button>
+      <div id="filters">
+        <button class="filter-option active" data-filter="all" 	onclick="filterSelection(event)">Show All</button>
         <button class="filter-option" data-filter="urban" 	onclick="filterSelection(event)">Urban View</button>
         <button class="filter-option" data-filter="country"	onclick="filterSelection(event)">Countryside</button>
         <button class="filter-option" data-filter="action"	onclick="filterSelection(event)">Action</button>
@@ -81,6 +92,16 @@
 				theme.classList.add('hidden');
 				});
 			};
+			};			
+			// Highlighting selected button
+			var container = document.getElementById("filters");
+			var btns = container.getElementsByClassName("filter-option");
+			for (var i = 0; i < btns.length; i++) {
+			btns[i].addEventListener("click", function() {
+			var current = document.getElementsByClassName("active");
+			current[0].className = current[0].className.replace(" active", " ");
+			this.className += " active";
+			});
 			};
 		</script>
       </body>
