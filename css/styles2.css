@@ -15,8 +15,9 @@ body {
 .row {
 	display: flex;
 	flex-direction: row;
-  flex-wrap: wrap;
+	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: center;
 }
 .row > .col {
 	padding: 0 8px;
@@ -24,7 +25,7 @@ body {
 .col {
 	float: left;
 	width: 33.333%;
-  padding: 10px;
+	padding: 10px;
 }
 
 /* Lightbox Styles */
@@ -53,10 +54,17 @@ body {
 
 /* Slides Styles */
 .slide {
-	display: none;
+	display: none;	
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Karla', sans-serif;
+	color: white;
 }
+
 .image-slide {
-	width: 100%;
+	width: auto;
+	height: 85vh;
+
 }
 .modal-preview {
 	width: 100%
@@ -100,7 +108,7 @@ img.hover-shadow {
 .next {
 	cursor: pointer;
 	position: absolute;
-	top: 50%;
+	top: 25%;
 	width: auto;
 	padding: 16px;
 	margin-top: -50px;
@@ -124,4 +132,6 @@ img.hover-shadow {
 .intro {
   font-family: 'Karla', sans-serif;
   padding: 10px;
+  color: black;
+  font-size: 20px;
 }
