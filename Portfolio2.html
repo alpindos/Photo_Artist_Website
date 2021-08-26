@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Portfolio</title>
+	<link rel="shortcut icon" type="image/jpg" href="images/Marlena-Ghelina-Icon.ico">
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Allison&
+													  family=Architects+Daughter&
+													  family=Lobster&
+													  family=Shadows+Into+Light&
+													  family=Karla&display=swap"
+													  rel="stylesheet">
+    <link rel="stylesheet" href="css/styles2.css">
+  </head>
+  <body>
+      <div class="intro">
+        <h2>A Glimpse of My Work</h2>
+        <p>These are some selected works from my portfolio. I catch the perfect moment sometimes
+           when walking down the streets, sometimes when I enjoy fresh air away from the crowd, and sometimes
+           in the middle of an action.</p>
+      </div>
+<!-- Preview of the images -->
+      <div class="row">
+        <div class="col">
+            <img src="images/urban/bmx22c-uVyBdRcrz94-unsplash.jpg" onclick="openLightbox();toSlide(1)" class="hover-shadow preview" alt="train station">
+        </div>
+        <div class="col">
+            <img src="images/urban/juan-rojas--_JsFLm3GwA-unsplash.jpg" onclick="openLightbox();toSlide(2)" class="hover-shadow preview" alt="city lights">
+        </div>
+        <div class="col">
+            <img src="images/urban/matteo-catanese-PI8Hk-3ZcCU-unsplash.jpg" onclick="openLightbox();toSlide(3)" class="hover-shadow preview" alt="Sunset">
+        </div>
+        <div class="col">
+            <img src="images/countryside/magda-v-LZJOmduhEfM-unsplash.jpg" onclick="openLightbox();toSlide(4)" class="hover-shadow preview" alt="green fields">
+        </div>
+        <div class="col">
+            <img src="images/countryside/niklas-hamann-R0rYa09bEx8-unsplash.jpg" onclick="openLightbox();toSlide(5)" class="hover-shadow preview" alt="Hay stacks">
+        </div>
+        <div class="col">
+            <img src="images/countryside/raquel-pedrotti-hB-Vwbyxr9U-unsplash.jpg" onclick="openLightbox();toSlide(6)" class="hover-shadow preview" alt="Yellow flowers">
+        </div>
+        <div class="col">
+            <img src="images/action/keagan-henman-j5aTxIgqgXk-unsplash.jpg" onclick="openLightbox();toSlide(7)" class="hover-shadow preview" alt="Biker in the air">
+        </div>
+        <div class="col">
+            <img src="images/action/pietro-mattia-zXqizKxnbBU-unsplash.jpg" onclick="openLightbox();toSlide(8)" class="hover-shadow preview" alt="Galloping horses">
+        </div>
+        <div class="col">
+            <img src="images/action/yoav-aziz-vnrnW01ddbc-unsplash.jpg" onclick="openLightbox();toSlide(9)" class="hover-shadow preview" alt="running women">
+        </div>
+      </div>
+<!-- Lightbox -->
+	  <div id="Lightbox" class="modal">
+		<span class="close pointer" onclick="closeLightbox()">&times;</span>
+		<div class="modal-content">
+			<div class="slide">
+				<img src="images/urban/bmx22c-uVyBdRcrz94-unsplash.jpg" class="image-slide" alt="train station">
+				<h4>Train Station</h4>
+				<p>Sometimes, getting on a train and going away helps to think and revive oneself</p>
+			</div>
+			<div class="slide">
+				<img src="images/urban/juan-rojas--_JsFLm3GwA-unsplash.jpg" class="image-slide" alt="city lights">
+				<h4>City Lights</h4>
+				<p>Cities are living organisms, even at night...</p>
+			</div>
+			<div class="slide">
+				<img src="images/urban/matteo-catanese-PI8Hk-3ZcCU-unsplash.jpg" class="image-slide" alt="Sunset">
+				<h4>Sunset</h4>
+				<p>Another day ends, but the city never rests</p>
+			</div>
+			<div class="slide">
+				<img src="images/countryside/magda-v-LZJOmduhEfM-unsplash.jpg" class="image-slide" alt="green fields">
+				<h4>Green Fields</h4>
+				<p>Endless and peaceful</p>
+			</div>
+			<div class="slide">
+				<img src="images/countryside/niklas-hamann-R0rYa09bEx8-unsplash.jpg" class="image-slide" alt="Hay stacks">
+				<h4>After Harvest</h4>
+				<p>Life cycle on the farm has come to an end, until next year</p>
+			</div>
+			<div class="slide">
+				<img src="images/countryside/raquel-pedrotti-hB-Vwbyxr9U-unsplash.jpg" class="image-slide" alt="Yellow flowers">
+				<h4>Yellow Flowers</h4>
+				<p>Flowers are ready to be harvested</p>
+			</div>
+			<div class="slide">
+				<img src="images/action/keagan-henman-j5aTxIgqgXk-unsplash.jpg" class="image-slide" alt="Biker in the air">
+				<h4>Flying</h4>
+				<p>When talent and adrenaline meets</p>
+			</div>
+			<div class="slide">
+				<img src="images/action/pietro-mattia-zXqizKxnbBU-unsplash.jpg" class="image-slide" alt="Galloping horses">
+				<h4>Full Speed</h4>
+				<p>Those horses are trained to be the fastest</p>
+			</div>
+			<div class="slide">
+				<img src="images/action/yoav-aziz-vnrnW01ddbc-unsplash.jpg" class="image-slide" alt="running women">
+				<h4>Shadows</h4>
+				<p>The best time to run along the seaside</p>
+			</div>
+
+			<a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+			<a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+			<div class="dots">
+			    <div class="col">
+				<img src="images/urban/bmx22c-uVyBdRcrz94-unsplash.jpg" class="modal-preview hover-shadow" onclick="toSlide(1)" alt="train station">
+				</div>
+				<div class="col">
+					<img src="images/urban/juan-rojas--_JsFLm3GwA-unsplash.jpg" class="modal-preview hover-shadow" onclick="toSlide(2)" alt="city lights">
+				</div>
+				<div class="col">
+					<img src="images/urban/matteo-catanese-PI8Hk-3ZcCU-unsplash.jpg" class="modal-preview hover-shadow" onclick="toSlide(3)" alt="Sunset">
+				</div>
+				<div class="col">
+					<img src="images/countryside/magda-v-LZJOmduhEfM-unsplash.jpg" class="modal-preview hover-shadow" onclick="toSlide(4)" alt="green fields">
+				</div>
+				<div class="col">
+					<img src="images/countryside/niklas-hamann-R0rYa09bEx8-unsplash.jpg" class="modal-preview hover-shadow" onclick="toSlide(5)" alt="Hay stacks">
+				</div>
+				<div class="col">
+					<img src="images/countryside/raquel-pedrotti-hB-Vwbyxr9U-unsplash.jpg" class="modal-preview hover-shadow" onclick="toSlide(6)" alt="Yellow flowers">
+				</div>
+				<div class="col">
+					<img src="images/action/keagan-henman-j5aTxIgqgXk-unsplash.jpg" class="modal-preview hover-shadow" onclick="toSlide(7)" class="hover-shadow preview" alt="Biker in the air">
+				</div>
+				<div class="col">
+					<img src="images/action/pietro-mattia-zXqizKxnbBU-unsplash.jpg" class="modal-preview hover-shadow" onclick="toSlide(8)" alt="Galloping horses">
+				</div>
+				<div class="col">
+					<img src="images/action/yoav-aziz-vnrnW01ddbc-unsplash.jpg" class="modal-preview hover-shadow" onclick="toSlide(9)" alt="running women">
+				</div>
+			</div>
+			<div id="caption"></div>
+		</div>
+	</div>
+    <!--    <script src="portfolioScript.js"></script> -->
+		<script>
+			// Initializes here and showSlide() is run to give the lightbox a default state
+			let slideIndex = 1;
+			showSlide(slideIndex);
+
+			// Providing the functionality for clickable contents
+			// previews, dots, controls and the close button
+			function openLightbox() {
+			document.getElementById('Lightbox').style.display = 'block';
+			};
+			function closeLightbox() {
+			document.getElementById('Lightbox').style.display = 'none';
+			};
+			// Assigning new values to slideIndex
+			function changeSlide(n) {
+			showSlide(slideIndex +=n);
+			};
+			function toSlide(n) {
+			showSlide(slideIndex = n);
+			};
+			// Logic for the Lightbox: It will decide which slide to show
+			// and which dot is active
+			function showSlide(n) {
+			const slides = document.getElementsByClassName('slide');
+			let modalPreviews = document.getElementsByClassName('modal-preview');
+			if (n > slides.length) {												// Return to the first slide after the last one
+			  slideIndex = 1;
+			};
+			if (n < 1) {															// Return to the last slide after the first one when going backwards
+			  slideIndex = slides.length;
+			};
+			for (let i = 0; i < slides.length; i++) {
+			  slides[i].style.display = "none";
+			};
+			for (let i = 0; i < modalPreviews.length; i++) {
+			  modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
+			};
+			slides[slideIndex - 1].style.display = 'block';
+			modalPreviews[slideIndex - 1].className += ' active';
+			};
+			
+			
+		</script>
+      </body>
+      </html>
