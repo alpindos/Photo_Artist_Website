@@ -18,7 +18,7 @@
   </head>
   <body>
       <div class="intro">
-        <h2>A Glimpse from My Works</h2>
+        <h2>A Glimpse of My Work</h2>
         <p>These are some selected works from my portfolio. I catch the perfect moment sometimes
            when walking down the streets, sometimes when I enjoy fresh air away from the crowd, and sometimes
            in the middle of an action.</p>
@@ -135,53 +135,52 @@
 					<img src="images/action/yoav-aziz-vnrnW01ddbc-unsplash.jpg" class="modal-preview hover-shadow" onclick="toSlide(9)" alt="running women">
 				</div>
 			</div>
+			<div id="caption"></div>
 		</div>
 	</div>
     <!--    <script src="portfolioScript.js"></script> -->
 		<script>
-// Initializes here and showSlide() is run to give the lightbox a default state
-      let slideIndex = 1;
-      showSlide(slideIndex);
+			// Initializes here and showSlide() is run to give the lightbox a default state
+			let slideIndex = 1;
+			showSlide(slideIndex);
 
-      // Providing the functionality for clickable contents
-      // previews, dots, controls and the close button
-      function openLightbox() {
-        document.getElementById('Lightbox').style.display = 'block';
-      };
-      function closeLightbox() {
-        document.getElementById('Lightbox').style.display = 'none';
-      };
-      // Assigning new values to slideIndex
-      function changeSlide(n) {
-        showSlide(slideIndex +=n);
-      };
-      function toSlide(n) {
-        showSlide(slideIndex = n);
-      };
-      // Logic for the Lightbox: It will decide which slide to show
-      // and which dot is active
-      function showSlide(n) {
-        const slides = document.getElementsByClassName('slide');
-        let modalPreviews = document.getElementsByClassName('modal-preview');
-
-        if (n > slides.length) {
-          slideIndex = 1;
-        };
-
-        if (n < 1) {
-          slideIndex = slides.length;
-        };
-
-        for (let i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        };
-
-        for (let i = 0; i < modalPreviews.length; i++) {
-          modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
-        };
-        slides[slideIndex - 1].style.display = 'block';
-        modalPreviews[slideIndex - 1].className += ' active';
-      };
+			// Providing the functionality for clickable contents
+			// previews, dots, controls and the close button
+			function openLightbox() {
+			document.getElementById('Lightbox').style.display = 'block';
+			};
+			function closeLightbox() {
+			document.getElementById('Lightbox').style.display = 'none';
+			};
+			// Assigning new values to slideIndex
+			function changeSlide(n) {
+			showSlide(slideIndex +=n);
+			};
+			function toSlide(n) {
+			showSlide(slideIndex = n);
+			};
+			// Logic for the Lightbox: It will decide which slide to show
+			// and which dot is active
+			function showSlide(n) {
+			const slides = document.getElementsByClassName('slide');
+			let modalPreviews = document.getElementsByClassName('modal-preview');
+			if (n > slides.length) {												// Return to the first slide after the last one
+			  slideIndex = 1;
+			};
+			if (n < 1) {															// Return to the last slide after the first one when going backwards
+			  slideIndex = slides.length;
+			};
+			for (let i = 0; i < slides.length; i++) {
+			  slides[i].style.display = "none";
+			};
+			for (let i = 0; i < modalPreviews.length; i++) {
+			  modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
+			};
+			slides[slideIndex - 1].style.display = 'block';
+			modalPreviews[slideIndex - 1].className += ' active';
+			};
+			
+			
 		</script>
       </body>
       </html>
